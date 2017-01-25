@@ -14,9 +14,16 @@ client.open(err => {
     setInterval(function () {
         var message = new device.Message(JSON.stringify({
             deviceId: 'MySampleDevice',
-            value: Math.random()
+            value: {
+                esr: Math.random() * 10,
+                accelerationData: {
+                    x: Math.random() * 10,
+                    y: Math.random() * 10,
+                    z: Math.random() * 10
+                }
+            }
         }));
         console.log('Sending D2C message -->');
-        client.sendEvent(message, (err,res) => {});
+        client.sendEvent(message, (err, res) => { });
     }, 5000);
 });
