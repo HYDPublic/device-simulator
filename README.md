@@ -27,16 +27,16 @@ your Azure IoT Hub instance. You can find it by following these instructions.
  - Next you are shown that policies permissions and access keys. Copy and paste
  the **Connection String - Primary Key** field.
 
- Now that you have your connection string, you can enter the above command to authenticate.
- After this, you are now able to create a new device on your Iot Hub. Do this by typing
+Now that you have your connection string, you can enter the above command to authenticate.
+After this, you are now able to create a new device on your Iot Hub. Do this by typing
 
- ```bash
- iothub-explorer create <device-id> --conection-string
- ```
+```bash
+iothub-explorer create <device-id> --conection-string
+```
 
- Provide your own device ID (e.g. `MySampleDevice`) and you will be given a variety of information
- about your new device, including a connection string. Copy and paste this connection string
- into the `index.js` file on this line
+Provide your own device ID (e.g. `MySampleDevice`) and you will be given a variety of information
+about your new device, including a connection string. Copy and paste this connection string
+into the `index.js` file on this line
 
 ```javascript
 var client = deviceAmqp.clientFromConnectionString('<connection-string-here>');
