@@ -45,7 +45,6 @@ var client = deviceAmqp.clientFromConnectionString('<connection-string-here>');
 After this you are ready to go! You can now use the commands below to startup your simulated device.
 
 ```bash
-cd device/
 npm install
 node .
 ```
